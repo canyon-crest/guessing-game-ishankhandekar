@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+#card{
+    background-color: white;
+    width: 50vw;
+    height: 80vh;
+    z-index: 2;
+}
