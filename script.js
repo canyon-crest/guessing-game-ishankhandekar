@@ -5,6 +5,7 @@ let guessCount = 0;
 const scores = [];
 let range = 0;
 let roundStart = -1;
+document.getElementById("date").innerText = updateDate();
 setInterval(function(){
     document.getElementById("date").innerText = updateDate();
 },1000);
