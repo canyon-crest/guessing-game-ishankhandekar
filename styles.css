@@ -2,11 +2,100 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ADEDE);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+
+
 }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 #card{
     background-color: white;
-    width: 50vw;
-    height: 80vh;
+    
+   
     z-index: 2;
+    padding: 2rem 4rem;
+    border-radius: 20px;
 }
+
+#date{
+    font-family: roboto mono;
+    color: #007FFF;
+    font-size: 0.8rem;
+    font-weight: 400;
+    background-color: rgba(0, 127, 255, 0.05);
+    width: fit-content;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+h3{
+    font-family: montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type="radio"] {
+  /* 2. Remove default browser styling */
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+
+  /* Your existing layout styles */
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+   /* Radios should be circles */
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+   /* Inner dot should also be a circle */
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color, blue);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+p{
+    font-family: epilogue;
+    font-weight: 300;
+    color: rgba(118, 118, 118, 0.8);
+    font-size: 0.9rem;
+    
+}
+li{
+    font-family: epilogue;
+    font-weight: 300;
+    color: rgba(118, 118, 118, 0.8);
+    font-size: 0.9rem;
+    padding-bottom: 3px;
+    
+}
+.underline{
+      text-decoration-line: underline; 
+    text-decoration-color: #ff5733; 
+  text-decoration-thickness: 1px;  
+  text-decoration-style: solid;   
+  text-underline-offset: 2px; 
+}
+

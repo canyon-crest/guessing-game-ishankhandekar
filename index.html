@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>JavaScript Number Guessing Game</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
@@ -8,32 +17,33 @@
   </head>
   <body>
     
-    <div class="card">
+    <div id="card">
       <p id="date"></p>
 
       <h3>Level</h3>
-      <input type="radio" name="level" id="e" value="3" checked><label for="e">Easy</label>
-      <input type="radio" name="level" id="m" value="10"><label for="m">Medium</label>
-      <input type="radio" name="level" id="h" value="100"><label for="h">Hard</label>
+      <div style="display: flex; justify-content: space-between;">
+      <div style="display: flex;"><input type="radio" name="level" id="e" value="3" checked><label style="padding-left: 5px;" for="e">Easy</label></div>
+      <div style="display: flex;"><input type="radio" name="level" id="m" value="10"><label style="padding-left: 5px;" for="m">Medium</label></div>
+      <div style="display: flex;"><input type="radio" name="level" id="h" value="100"><label style="padding-left: 5px;" for="h">Hard</label></div>
 
       <button id="playBtn">Play</button>
-
+        </div>
       <h3 id="msg">Select a Level</h3>
       <input type="text" id="guess">
       <button id="guessBtn" disabled>Guess</button>
       <button id="giveUpBtn" disabled>Give Up</button>
 
       <h3>Stats</h3>
-      <p id="wins">Total wins: 0</p>
-      <p id="avgScore">Average Score: </p>
-      <p id="fastest">Fastest Game: </p>
-      <p id="avgTime">Average Time: </p>
+      <p class="underline" id="wins">Total wins: 0</p>
+      <p class="underline" id="avgScore">Average Score: </p>
+      <p class="underline" id="fastest">Fastest Game: </p>
+      <p class="underline" id="avgTime">Average Time: </p>
 
       <h3>Leaderboard</h3>
       <ol>
-        <li name="leaderboard">--</li>
-        <li name="leaderboard">--</li>
-        <li name="leaderboard">--</li>
+        <li class="underline" name="leaderboard">--</li>
+        <li class="underline" name="leaderboard">--</li>
+        <li class="underline" name="leaderboard">--</li>
       </ol>
     ></div>
 

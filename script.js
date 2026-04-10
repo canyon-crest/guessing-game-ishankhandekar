@@ -8,7 +8,8 @@ let roundStart = -1;
 setInterval(function(){
     document.getElementById("date").innerText = updateDate();
 },1000);
-let username = prompt("Please enter your preferred name:");
+// let username = prompt("Please enter your preferred name:");
+let username = "blob";
 const times = [];
 username = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
 document.getElementById("playBtn").addEventListener("click",play);
