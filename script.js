@@ -122,8 +122,14 @@ function updateScore(score){
     for (const val of times) {
         if (val < fastest) fastest = val;
     }
-    
-    document.getElementById("fastest").textContent = "Fastest time: " + fastest + "seconds";
+
+    let sumTimer = 0;
+    for (const val of times) {
+        sumTimer += val;
+    }
+    let averageTime = sumTimer/times.length;
+    document.getElementById("avgTime").textContent = "Average time: " + averageTime + " seconds";
+    document.getElementById("fastest").textContent = "Fastest time: " + fastest + " seconds";
     
 }
 
