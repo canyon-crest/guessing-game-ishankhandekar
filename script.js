@@ -8,8 +8,8 @@ let roundStart = -1;
 setInterval(function(){
     document.getElementById("date").innerText = updateDate();
 },1000);
-// let username = prompt("Please enter your preferred name:");
-let username = "blob";
+let username = prompt("Please enter your preferred name:");
+
 const times = [];
 username = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
 document.getElementById("playBtn").addEventListener("click",play);
@@ -87,6 +87,8 @@ function makeGuess(){
     guessCount++;
     if(guess == answer){
         msg.textContent = username + ", you got it correct! It took " + guessCount + " tries.";
+        const winSound = new Audio("audio/win.mp3");
+        winSound.play();
         updateScore(guessCount);
         resetGame();
     }
@@ -167,6 +169,8 @@ function giveUp(){
     e.disabled = false;
     m.disabled = false;
     h.disabled = false;
+    const booSound = new Audio("audio/boo.mp3");
+    booSound.play();
     updateScore(range);
     document.getElementById("msg").textContent = "Whoops, you gave up. Select a level to play again!";
 }
