@@ -5,6 +5,9 @@ let guessCount = 0;
 const scores = [];
 let range = 0;
 let roundStart = -1;
+setInterval(function(){
+    document.getElementById("date").innerText = updateDate();
+},1000);
 let username = prompt("Please enter your preferred name:");
 const times = [];
 username = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
@@ -12,9 +15,7 @@ document.getElementById("playBtn").addEventListener("click",play);
 document.getElementById("guessBtn").addEventListener("click",makeGuess);
 document.getElementById("giveUpBtn").addEventListener("click",giveUp);
 
-setInterval(function(){
-    document.getElementById("date").innerText = updateDate();
-},1000);
+
 function updateDate(){
     let dateToday = new Date();
     let month = dateToday.getMonth(); 
